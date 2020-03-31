@@ -1,27 +1,23 @@
 # COVID-19
 
-#-----------------------------------------------31/03/2020---------------------------------------------------------
+# Situacion critica Hospital - COVID-19
 
-#Hoy dia 31/03/2020 he empezado a trabajar como becario de sistemas en el departamento de emergencias del Hospital de Alcorcon,
-#Lo primero que he visto al llegar, es que tanto los medicos y las recepcionistas tienen un lio a la hora de ver las carpetas, ficheros...
-#Tambien tienen problemas para ver la informacion de los pacientes contagiados del COVID-19, etc
-#Que idea he aportado:
-        # 1. Crear una carpeta compartida llamada EMERGENCIAS para que asi en esa carpeta esten toda la informacion de Emergencias
-        # 2. Crearemos un unidad de control el cual tengan permisos todos los trabajadores que formen parte de EMERGENCIAS
-        # 3. Dentro de esa carpeta crearemos a todos los usuarios que entren por emergencias y los meteremos en grupos
-        # 4. Una vez realizado todo esto crearemos un formulario para que los medicos cuando realizen las pruebas confirem si el paciente tienen el COVID o no
+# Hoy dia 31/03/2020 he empezado a trabajar como becario de sistemas en el departamento de emergencias del Hospital de Alcorcon, Lo primero que he visto al llegar, es que tanto los medicos y las recepcionistas tienen un lio a la hora de ver las carpetas, ficheros... Tambien tienen problemas para ver la informacion de los pacientes contagiados del COVID-19, etc
 
 
- # 1. Crear una carpeta compartida llamada EMERGENCIAS
+# Que ideas he aportado:
+    
+    
+  1. Crear una carpeta compartida llamada EMERGENCIAS
  	
 New-SmbShare -Name fso -Path E:\EMERGENCIAS –FullAccess Administrador -ReadAccess Everyone
 
 
- # 2. Crearemos un acceso directo el cual tengan permisos todos los trabajadores que formen parte de EMERGENCIAS
+  2. Crearemos un acceso directo el cual tengan permisos todos los trabajadores que formen parte de EMERGENCIAS
 
  New-PSDrive -Name "E" -PSProvider Filesystem -Root \\Laptop-s5ls1du9\EMERGENCIAS -Persist
 
- # 3. Dentro de esa carpeta crearemos a todos los usuarios que entren por emergencias y los meteremos en grupos
+  3. Dentro de esa carpeta crearemos a todos los usuarios que entren por emergencias y los meteremos en grupos
 
  gc E:\EMERGENCIAS.txt | %{
     new-aduser -name (($_).split(",")[0]) -sam (($_).split(",")[0]) -accountpassword (convertto-securestring "COVID19" -asplaintext -force) -enable $true
@@ -30,7 +26,7 @@ New-SmbShare -Name fso -Path E:\EMERGENCIAS –FullAccess Administrador -ReadAcc
 Start-Sleep -Seconds 1
 
 
-# 4. Una vez realizado todo esto crearemos un formulario para que los medicos cuando realizen las pruebas confirem si el paciente tienen el COVID o no
+ 4. Una vez realizado todo esto crearemos un formulario para que los medicos cuando realizen las pruebas confirem si el paciente tienen el COVID o no
 
 $buttons_functionslist=@(
 	"SI"
