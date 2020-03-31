@@ -2,7 +2,7 @@
 
 # Resolver la siguiente situación - COVID-19
 
-## Hoy dia 31/03/2020 he empezado a trabajar como becario de sistemas en el departamento de emergencias del Hospital de Alcorcon, Lo primero que he visto al llegar, es que tanto los medicos y las recepcionistas tienen un lio a la hora de ver las carpetas, ficheros... Tambien tienen problemas para ver la informacion de los pacientes contagiados del COVID-19.
+## Hoy dia 31/03/2020 he empezado a trabajar como becario de sistemas en el departamento de emergencias del Hospital de Alcorcon, Lo primero que he visto al llegar, es que tanto medicos y recepcionistas tienen un lio a la hora de ver las carpetas, ficheros... Tambien tienen problemas para ver la informacion de los pacientes contagiados del COVID-19.
 
 
    
