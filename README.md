@@ -28,7 +28,7 @@ New-SmbShare -Name fso -Path E:\EMERGENCIAS –FullAccess Administrador -ReadAcc
 Start-Sleep -Seconds 1
 ```
 
- ### 4. Una vez realizado todo esto crearemos un formulario para que los medicos cuando realizen las pruebas confirem si el paciente tienen el COVID o no
+ ### 4. Una vez realizado todo esto crearemos un formulario para que los medicos cuando realizen las pruebas confirmen si el paciente tienen el COVID o no
  
 ```PowerShell 
 $buttons_functionslist=@(
